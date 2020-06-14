@@ -18,7 +18,7 @@ public class Chauffeur {
 		return Tra;
 	}
 	public String toString() {
-	    return nom+ " "+ prenom + ann+ " employ¨¦"+ " "+ adr+ "\nles trajets:";
+	    return nom+ " "+ prenom + "   "+ ann+ " employ¨¦"+ "   "+ adr+ "\nles trajets:";
 	}
 	
 	public void display(Chauffeur chau) {
