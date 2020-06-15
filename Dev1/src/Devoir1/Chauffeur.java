@@ -18,11 +18,12 @@ public class Chauffeur {
 		return Tra;
 	}
 	public String toString() {
-	    return nom+ " "+ prenom + "   "+ ann+ " employ¨¦"+ "   "+ adr+ "\nles trajets:";
+	    return nom+ " "+ prenom + "   "+ ann+ " employé"+ "   "+ adr;
 	}
 	
-	public void display(Chauffeur chau) {
+	public void display(Chauffeur chau) throws WrongInputException {
 		System.out.println(chau);
+		System.out.println("\nles trajets:\n");
 		getTra().display();
 	}
  

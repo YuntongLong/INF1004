@@ -13,7 +13,7 @@ public class Limousine {
 	}
 	
 	public String toString() {
-		return type+ "  "+couleur+"  " + num+ "\nla capacit¨¦ du r¨¦servoir:"+ capacite+"ltr" + "\nle nombre de passagers:"+nbP; 
+		return type+ "  "+couleur+"  " + num+ "\nla capacite du reservoir:"+ capacite+"ltr" + "\nle nombre de passagers:"+nbP; 
 	}
 
 }

@@ -2,7 +2,7 @@ package Devoir1;
 
 import java.util.Iterator;
 
-public class TrajetList<T>// implements Iterable<T> 
+public class TrajetList<T>
 {
 	
 	
@@ -41,41 +41,32 @@ public class TrajetList<T>// implements Iterable<T>
 	Trajet newTrajet= new Trajet(villeD,villeA,kilometrageD,kilometrageA,limousine,null);
 	n.next= newTrajet;
 	N++;}
-	public void display() {
+	public void display()throws WrongInputException {
 		if (head.next==null)
-			System.out.println("empty");
+			throw new WrongInputException();
+			//System.out.println("empty");
 		Trajet temp= head.next;
 		for(int i=0; i<N; i++){
 			System.out.println(temp.villeD+"-->"+temp.villeA+","+temp.kilometrageD+"-->"+temp.kilometrageA+","+temp.limousine);
 			temp = temp.next;}
 		System.out.println("\n");
 		}
+	
+	public void displayLim() {
+		if (head.next==null)
+			System.out.println("empty");
+		Trajet temp= head.next;
+		for(int i=0; i<N; i++){
+			if(temp.limousine.equals(temp.next.limousine)) {
+				temp = temp.next;
+			}
+			else {
+			System.out.println(temp.limousine);
+			temp = temp.next;}
+		}
 		
-	
-	
-	/*@Override
-	public Iterator<T> iterator() {
-		return new LIterator();
-	}
-	
-	private class LIterator implements Iterator{
-		private Trajet n;
-		public LIterator() {
-			this.n= head;
+		System.out.println("\n");
 		}
-		@Override
-		public boolean hasNext() {
-			return n.next!=null;
-		}
-		@Override
-		public Object next() {
-			n= n.next;
-			return n.toString();
-		}
-	}
-	*/
-	
-	 
 		
 	}
 	
